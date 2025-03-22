@@ -1,15 +1,8 @@
 "use client";
 
 import Spline from '@splinetool/react-spline';
-import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <main className="min-h-screen bg-black text-white overflow-hidden">
       {/* Hero Section with 3D Robot and Blue Accent */}
@@ -91,7 +84,7 @@ export default function Home() {
               <h2 className="text-4xl font-bold mb-6">About Me</h2>
               <p className="text-gray-400 text-lg mb-8">
                 As a student at HEC Paris, I combine my technical expertise in full-stack development with business acumen. 
-                I'm passionate about creating innovative digital solutions that solve real business challenges.
+                I&apos;m passionate about creating innovative digital solutions that solve real business challenges.
               </p>
               <div className="grid grid-cols-2 gap-8">
                 <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
@@ -122,7 +115,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-8">Let's Connect</h2>
           <p className="text-gray-400 text-lg mb-12 max-w-2xl mx-auto">
-            Looking to collaborate on innovative projects or discuss business opportunities? Let's connect and create something extraordinary together.
+            Looking to collaborate on innovative projects or discuss business opportunities? Let&apos;s connect and create something extraordinary together.
           </p>
           <a
             href="mailto:your.email@example.com"
