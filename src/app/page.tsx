@@ -287,6 +287,45 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </a>
+              <a
+                href="https://www.instagram.com/math.garcia10/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-blue-500 text-blue-500 font-medium overflow-hidden rounded-md hover:text-white transition-colors duration-300"
+              >
+                <span className="relative z-10">Instagram</span>
+                <div className="absolute inset-0 bg-blue-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+                <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.509-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.247-.637-.415-1.363-.465-2.428-.047-1.066-.06-1.405-.06-4.122 0-2.717.01-3.056.06-4.122.05-1.066.218-1.79.465-2.428.254-.66.598-1.216 1.153-1.772.5-.509 1.105-.902 1.772-1.153.637-.247 1.363-.415 2.428-.465C8.944 2.013 9.283 2 12 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 12a6 6 0 11-12 0 6 6 0 0112 0z" />
+                  <circle cx="18" cy="6" r="1" stroke="none" fill="currentColor" />
+                </svg>
+              </a>
+              <a
+                href="https://x.com/garciamathias_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-blue-500 text-blue-500 font-medium overflow-hidden rounded-md hover:text-white transition-colors duration-300"
+              >
+                <span className="relative z-10">Twitter</span>
+                <div className="absolute inset-0 bg-blue-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+                <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497-3.753c0-.249 1.51-2.772 1.818-4.013z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mathias-garcia-a01047218/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-blue-500 text-blue-500 font-medium overflow-hidden rounded-md hover:text-white transition-colors duration-300"
+              >
+                <span className="relative z-10">LinkedIn</span>
+                <div className="absolute inset-0 bg-blue-500 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></div>
+                <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 14v7h4v-7M4 7a2 2 0 104 0 2 2 0 00-4 0z" />
+                </svg>
+              </a>
             </div>
           </div>
         </section>
