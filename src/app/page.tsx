@@ -172,117 +172,116 @@ export default function Home() {
           <div className="absolute right-0 bottom-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-blue-500/10 blur-[150px] rounded-full -z-10" />
           
           <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between mb-12 sm:mb-16 lg:mb-20">
+            <div className="flex items-center justify-between mb-8">
               <h2 className="text-3xl sm:text-4xl font-bold">Experience</h2>
               <div className="h-[2px] flex-1 mx-4 sm:mx-8 bg-gradient-to-r from-blue-500/50 to-transparent" />
             </div>
             
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-500/30 to-transparent" />
-              <div className="sm:hidden absolute left-6 top-0 h-full w-[2px] bg-gradient-to-b from-blue-500/50 via-blue-500/30 to-transparent" />
-              
-              {/* Timeline Items */}
-              <div className="space-y-8 sm:space-y-24">
-                {[
-                  {
-                    title: 'Founder',
-                    company: 'Fusion',
-                    period: 'Present',
-                    description: 'Built an innovative LLM/Agent orchestrator platform serving 1,000 daily active users.',
-                    skills: ['AI/ML', 'LLM', 'Product Development', 'Entrepreneurship'],
-                    icon: (
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    )
-                  },
-                  {
-                    title: 'Freelance Media Buyer',
-                    company: 'Meta and TikTok',
-                    period: 'July 2023 - Present',
-                    description: 'Managed acquisition strategies for cultural sector clients with €30,000+ budget, achieving 50% revenue increase through targeted campaigns.',
-                    skills: ['Media Buying', 'Digital Marketing', 'Strategy', 'Data Science'],
-                    icon: (
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                      </svg>
-                    )
-                  },
-                  {
-                    title: 'Master in Management',
-                    company: 'HEC Paris',
-                    period: 'September 2023 - April 2027',
-                    description: 'Specializing in Economics, Marketing, Finance, and Data Science',
-                    skills: ['Economics', 'Finance', 'Data Science'],
-                    icon: (
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
-                    )
-                  }
-                ].map((exp, i) => (
-                  <div key={i} className={`relative flex items-start ${i % 2 === 0 ? 'sm:justify-start' : 'sm:justify-end'} sm:items-center`}>
-                    {/* Timeline Dot - Mobile */}
-                    <div className="sm:hidden absolute left-6 transform -translate-x-1/2 w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center border-2 border-blue-500/50 z-10">
-                      <div className="text-blue-400">
-                        {exp.icon}
-                      </div>
-                    </div>
-
-                    {/* Timeline Dot - Desktop */}
-                    <div className="hidden sm:flex absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-blue-500/20 rounded-full items-center justify-center border-2 border-blue-500/50 group-hover:border-blue-500 transition-colors duration-300">
-                      <div className="text-blue-400 group-hover:text-blue-300 transition-colors duration-300">
-                        {exp.icon}
-                      </div>
-                    </div>
-
-                    {/* Content Card - Mobile */}
-                    <div className="ml-12 sm:hidden w-full">
-                      <div className="group relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl -z-10 blur-sm opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
-                        <div className="bg-white/5 backdrop-blur-sm p-5 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                          <div className="flex flex-col mb-3">
-                            <h3 className="text-lg font-semibold">{exp.title}</h3>
-                            <span className="text-sm text-gray-400 mt-1">{exp.period}</span>
-                          </div>
-                          <div className="text-blue-400 mb-2">{exp.company}</div>
-                          <p className="text-sm text-gray-400 mb-3">{exp.description}</p>
-                          <div className="flex flex-wrap gap-2">
-                            {exp.skills.map((skill, j) => (
-                              <span key={j} className="px-2 py-1 bg-blue-500/10 rounded-full text-xs text-blue-300">
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
+            {/* Grille d'expériences avec cartes de taille égale */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              {[
+                {
+                  title: 'OpenRoboticDog Developer',
+                  company: 'Personal Project',
+                  period: 'May 2025 - Present',
+                  description: 'Building an affordable, autonomous quadruped robot that anyone can build at home. Capable of performing basic autonomous movements like walking, turning, and basic navigation.',
+                  skills: ['Robotics', '3D Printing', 'Arduino', 'Python', 'Autonomous'],
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: 'Physical AI (side project)',
+                  company: 'Hugging Face - LeRobot',
+                  period: 'March 2025 - April 2025',
+                  description: 'Worked on Physical AI models with LeRobot, making AI for Robotics more accessible with end-to-end learning.',
+                  skills: ['Python', 'PyTorch', 'AI', 'Robotics', 'Computer Vision'],
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                    </svg>
+                  )
+                },
+                {
+                  title: 'Founder (side project)',
+                  company: 'Fusion',
+                  period: 'January 2025 - February 2025',
+                  description: 'Built an innovative LLM/Agent orchestrator platform serving 1,000 users.',
+                  skills: ['AI/ML', 'LLM', 'Product Development', 'Entrepreneurship'],
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  )
+                },
+                {
+                  title: 'AI Poker (side project)',
+                  company: 'DeepFlush AI',
+                  period: 'December 2024',
+                  description: 'Collaborated with Eliott Valette to develop an advanced AI poker bot using Monte Carlo Counterfactual Regret Minimization (MCCFR) for optimal decision making in Texas Hold\'em 6-max for professional players.',
+                  skills: ['Python', 'MCCFR', 'Game Theory', 'AI'],
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                    </svg>
+                  )
+                },
+                {
+                  title: 'Freelance Media Buyer & Data Scientist',
+                  company: 'Meta and TikTok',
+                  period: 'July 2023 - Present',
+                  description: 'Managed acquisition strategies for cultural sector clients with €30,000+ budget, achieving 50% revenue increase through targeted campaigns.',
+                  skills: ['Media Buying', 'Digital Marketing', 'Strategy', 'Data Science'],
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                    </svg>
+                  )
+                },
+                {
+                  title: 'Master in Management',
+                  company: 'HEC Paris',
+                  period: 'September 2023 - April 2027',
+                  description: 'Specializing in Economics, Marketing, Finance, and Data Science',
+                  skills: ['Economics', 'Finance', 'Data Science'],
+                  icon: (
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  )
+                }
+              ].map((exp, i) => (
+                <div key={i} className="group relative h-full">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-blue-600/20 rounded-xl -z-10 blur-sm opacity-30 group-hover:opacity-70 transition-opacity duration-300" />
+                  <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-blue-500/70 transition-all duration-300 shadow-xl shadow-blue-500/5 hover:shadow-blue-500/10 h-full flex flex-col">
+                    {/* Entête avec icône et titre */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-10 h-10 bg-blue-500/20 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-blue-500/80 shadow-md shadow-blue-500/30 flex-shrink-0">
+                        <div className="text-blue-400">
+                          {exp.icon}
                         </div>
                       </div>
-                    </div>
-
-                    {/* Content Card - Desktop */}
-                    <div className={`hidden sm:block w-[calc(50%-3rem)] ${i % 2 === 0 ? 'mr-12' : 'ml-12'}`}>
-                      <div className="group relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-xl -z-10 blur-sm opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
-                        <div className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-                          <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
-                            <h3 className="text-lg sm:text-xl font-semibold">{exp.title}</h3>
-                            <span className="text-sm text-gray-400 mt-1 sm:mt-0">{exp.period}</span>
-                          </div>
-                          <div className="text-blue-400 mb-3">{exp.company}</div>
-                          <p className="text-sm sm:text-base text-gray-400 mb-4">{exp.description}</p>
-                          <div className="flex flex-wrap gap-2">
-                            {exp.skills.map((skill, j) => (
-                              <span key={j} className="px-3 py-1 bg-blue-500/10 rounded-full text-xs sm:text-sm text-blue-300">
-                                {skill}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
+                      <div>
+                        <h3 className="text-xl font-semibold bg-gradient-to-r from-white to-white/80 bg-clip-text">{exp.title}</h3>
+                        <span className="text-blue-400 block mt-1 font-medium">{exp.company}</span>
+                        <span className="text-gray-400 block mt-1 text-sm font-light">{exp.period}</span>
                       </div>
+                    </div>
+                    
+                    {/* Description et compétences */}
+                    <p className="text-gray-300 mb-4 leading-relaxed ml-14 flex-grow">{exp.description}</p>
+                    <div className="flex flex-wrap gap-2 ml-14 mt-auto">
+                      {exp.skills.map((skill, j) => (
+                        <span key={j} className="px-3 py-1 bg-blue-500/10 backdrop-blur-sm rounded-full text-xs text-blue-300 border border-blue-500/20 hover:border-blue-500/50 transition-colors">
+                          {skill}
+                        </span>
+                      ))}
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
