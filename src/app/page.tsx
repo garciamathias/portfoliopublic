@@ -20,7 +20,7 @@ export default function Home() {
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Mathias Garcia",
-          "url": "https://mathiasgarcia.com",
+          "url": "https://garciamathias.com",
           "jobTitle": "AI & Robotics Engineer",
           "alumniOf": {
             "@type": "CollegeOrUniversity",
