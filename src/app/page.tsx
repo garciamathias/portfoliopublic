@@ -51,7 +51,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-lg sm:text-xl text-gray-400 mb-6 sm:mb-8 max-w-2xl">
-                Love AI and Robotics. Building AI Startups
+                Love AI and Robotics. Building AI Stuff
               </p>
               
               <div className="flex flex-wrap gap-3 sm:gap-4">
@@ -94,6 +94,13 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {[
                 {
+                  title: "OpenRoboticDog",
+                  description: "An affordable, autonomous quadruped robot that anyone can build at home. Capable of performing basic autonomous movements like walking, turning, and basic navigation.",
+                  image: "bg-gradient-to-br from-blue-600 to-blue-800",
+                  tags: ["Robotics", "3D Printing", "Arduino", "Python", "Autonomous"],
+                  link: "https://github.com/garciamathias/OpenRoboticDog"
+                },
+                {
                   title: "LeRobot",
                   description: "A Hugging Face project making AI for Robotics more accessible with end-to-end learning. State-of-the-art machine learning for real-world robotics in PyTorch.",
                   image: "bg-gradient-to-br from-yellow-600 to-red-800",
@@ -105,7 +112,7 @@ export default function Home() {
                   description: "Built an innovative LLM/Agent orchestrator platform serving 1,000 daily active users. A general-purpose AI agent system built in Python.",
                   image: "bg-gradient-to-br from-blue-600 to-blue-800",
                   tags: ["Python", "LLM", "Agents", "AI"],
-                  link: "#"
+                  link: "https://anyfusion.ai/"
                 },
                 {
                   title: "DeepFlush AI Poker",
@@ -120,13 +127,6 @@ export default function Home() {
                   image: "bg-gradient-to-br from-green-600 to-green-800",
                   tags: ["Python", "Search", "Web Crawler", "Full Stack"],
                   link: "https://github.com/garciamathias/search-engine"
-                },
-                {
-                  title: "Snake RL AI",
-                  description: "Reinforcement Learning AI that learns to play Snake using Q-learning and neural networks.",
-                  image: "bg-gradient-to-br from-red-600 to-red-800",
-                  tags: ["Python", "RL", "Q-Learning", "Neural Networks"],
-                  link: "https://github.com/garciamathias/snake"
                 },
                 {
                   title: "Makemore Implementation",
